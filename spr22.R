@@ -83,10 +83,10 @@ a <- ylim.prim[1] - b*ylim.sec[1]
 ggplot(data=avante,aes(day,alcohol*100,color=product,linetype=product))+
   geom_line(aes(y = a + alcohol*100*b),size=.75)+
   geom_line(aes(y = pH),size=.75)+
-  labs(title="High Gravity Fermentation Curve",
-       subtitle="Renaissance Avante",
+  labs(subtitle="Renaissance Avante",
        colour="Product",
-       linetype="Product")+
+       linetype="Product",
+       caption=bquote("A1 = 0.5 x"~10^6*" cells/ mL/"~degree*"P,  A2 = 1.0 x"~10^6*" cells/ mL/"~degree*"P,  A3 = 1.5 x"~10^6*" cells/ mL/"~degree*"P"))+
   scale_color_manual(values=cbPalette)+
   scale_linetype_manual(values=lineVariation)+
   scale_x_continuous("Days", breaks=seq(0,15,2))+
@@ -98,10 +98,10 @@ ggsave("avante.png",width=8.5,height=5)
 ggplot(data=viva,aes(day,alcohol*100,color=product,linetype=product))+
   geom_line(aes(y = a + alcohol*100*b),size=.75)+
   geom_line(aes(y = pH),size=.75)+
-  labs(title="High Gravity Fermentation Curve",
-       subtitle="Renaissance Viva",
+  labs(subtitle="Renaissance Viva",
        colour="Product",
-       linetype="Product")+
+       linetype="Product",
+       caption=bquote("V1 = 0.5 x"~10^6*" cells/ mL/"~degree*"P,  V2 = 1.0 x"~10^6*" cells/ mL/"~degree*"P,  V3 = 1.5 x"~10^6*" cells/ mL/"~degree*"P"))+
   scale_color_manual(values=cbPalette)+
   scale_linetype_manual(values=lineVariation)+
   scale_x_continuous("Days", breaks=seq(0,15,2))+
@@ -113,10 +113,10 @@ ggsave("viva.png",width=8.5,height=5)
 ggplot(data=merit,aes(day,alcohol*100,color=product,linetype=product))+
   geom_line(aes(y = a + alcohol*100*b),size=.75)+
   geom_line(aes(y = pH),size=.75)+
-  labs(title="High Gravity Fermentation Curve",
-       subtitle="Chr. Hansen Merit",
+  labs(subtitle="Chr. Hansen Merit",
        colour="Product",
-       linetype="Product")+
+       linetype="Product",
+       caption=bquote("M1 = 0.5 x"~10^6*" cells/ mL/"~degree*"P,  M2 = 1.0 x"~10^6*" cells/ mL/"~degree*"P,  M3 = 1.5 x"~10^6*" cells/ mL/"~degree*"P"))+
   scale_color_manual(values=cbPalette)+
   scale_linetype_manual(values=lineVariation)+
   scale_x_continuous("Days", breaks=seq(0,15,2))+
